@@ -1,0 +1,15 @@
+<h3>Weapons Table</h3>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Damage</th>
+    <th>Cost</th>
+    <th>Weight</th>
+  </tr>
+  <tr *ngFor="let weapon of weapons">
+    <td>{{ weapon.Name }}</td>
+    <td>{{ weapon.DMG_M_Number }}d{{ weapon.DMG_M_Dice }}</td>
+    <td>{{ weapon.Cost_Number }}{{ weapon.Cost_Denom }}</td>
+    <td>{{ weapon.Weight }}</td>
+  </tr>
+</table>
