@@ -11,11 +11,19 @@ export class WeaponsComponent implements OnInit {
   weapons: Weapon[];
   constructor(public weaponsService: WeaponsService) { }
 
+  displayWeaponDetail = false;
+  weaponDetail: Weapon = new Weapon(null);
   ngOnInit() {
     this.weaponsService.getWeapons().subscribe(weapons => {
-      console.log(weapons[0]);
       this.weapons = weapons;
     });
+  }
+
+  getWeapon(id) {
+    this.weaponsService.getWeaponById(id).subscribe(weapon => {
+      this.weaponDetail = weapon;
+    });
+    this.displayWeaponDetail = true;
   }
 
 }

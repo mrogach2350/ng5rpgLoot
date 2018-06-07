@@ -13,4 +13,12 @@ export class WeaponsService {
   getWeapons(): Observable<Weapon[]> {
     return this.http.get<Weapon[]>(this.weaponsUrl);
   }
+
+  getWeaponById(id): Observable<Weapon> {
+    return this.http.get<Weapon>(`${this.weaponsUrl}/${id}`);
+  }
+
+  createWeapon(weapon): Observable<Weapon> {
+    return this.http.post<Weapon>(this.weaponsUrl, weapon);
+  }
 }

@@ -1,15 +1,38 @@
+<div *ngIf="displayWeaponDetail">
+  <h3>Weapon Detail</h3>
+  <ul>
+    <li><strong>Name: </strong>{{weaponDetail.name}}</li>
+    <li><strong>Description: </strong>{{weaponDetail.description}}</li>
+    <li><strong>Weight: </strong>{{weaponDetail.weight}}</li>
+    <li><strong>Price: </strong>{{weaponDetail.price}}</li>
+    <li><strong>Proficiency: </strong>{{weaponDetail.proficiency}}</li>
+    <li><strong>Weapon Class: </strong>{{weaponDetail.weaponClass}}</li>
+    <li><strong>Damage Type: </strong>{{weaponDetail.damageType}}</li>
+    <li><strong>Damage (Tiny): </strong>{{weaponDetail.dmgT}}</li>
+    <li><strong>Damage (Small): </strong>{{weaponDetail.dmgS}}</li>
+    <li><strong>Damage (Medium): </strong>{{weaponDetail.dmgM}}</li>
+    <li><strong>Damage (Large): </strong>{{weaponDetail.dmgL}}</li>
+    <li><strong>Critical: </strong>{{weaponDetail.critical}}</li>
+    <li><strong>Special: </strong>{{weaponDetail.special}}</li>
+    <li><strong>Name: </strong>{{weaponDetail.source}}</li>
+  </ul>
+  <button (click)="displayWeaponDetail = false">Hide Weapon Detail</button>
+</div>
+
 <h3>Weapons Table</h3>
-<table>
+<table id="weapons-table">
   <tr>
+    <th>Action</th>
     <th>Name</th>
     <th>Damage</th>
     <th>Cost</th>
     <th>Weight</th>
   </tr>
   <tr *ngFor="let weapon of weapons">
-    <td>{{ weapon.Name }}</td>
-    <td>{{ weapon.DMG_M_Number }}d{{ weapon.DMG_M_Dice }}</td>
-    <td>{{ weapon.Cost_Number }}{{ weapon.Cost_Denom }}</td>
-    <td>{{ weapon.Weight }}</td>
+    <td><button (click)="getWeapon(weapon.id)">Get Weapon Details</button></td>
+    <td>{{ weapon.name }}</td>
+    <td>{{ weapon.dmgM }}</td>
+    <td>{{ weapon.price }}</td>
+    <td>{{ weapon.weight }}</td>
   </tr>
 </table>

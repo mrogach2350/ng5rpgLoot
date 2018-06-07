@@ -4,14 +4,7 @@
 
 export const environment = {
   production: false,
-  firebase: {
-    apiKey: 'AIzaSyDSReJwmQq28UekDmCjN2jAzPx8OPTtOnw',
-    authDomain: 'rpgloot-9cf84.firebaseapp.com',
-    databaseURL: 'https://rpgloot-9cf84.firebaseio.com',
-    projectId: 'rpgloot-9cf84',
-    storageBucket: 'rpgloot-9cf84.appspot.com',
-    messagingSenderId: '339670010665'
-  }
+  ws_url: 'http://localhost:7000'
 };
 
 /*

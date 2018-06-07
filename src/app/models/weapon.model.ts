@@ -1,35 +1,35 @@
 export interface IWeapon {
-    Name: string;
-    Cost_Number: number;
-    Cost_Denom: string;
-    DMG_S_Number: number;
-    DMG_S_Dice: string;
-    DMG_M_Number: number;
-    DMG_M_Dice: string;
-    Critical: number;
-    Crit_Range: string;
-    Range: number;
-    Weight: number;
-    Type: string;
-    Special: string;
-    Masterwork: boolean;
+    name: string;
+    description: string;
+    weight: string;
+    price: string;
+    proficiency: string;
+    weaponClass: string;
+    damageType: string;
+    source: string;
+    special: string;
+    dmgT: string;
+    dmgS: string;
+    dmgM: string;
+    dmgL: string;
+    critical: string;
 }
 
 export class Weapon implements IWeapon {
-    public Name: string;
-    public Cost_Number: number;
-    public Cost_Denom: string;
-    public DMG_S_Number: number;
-    public DMG_S_Dice: string;
-    public DMG_M_Number: number;
-    public DMG_M_Dice: string;
-    public Critical: number;
-    public Crit_Range: string;
-    public Range: number;
-    public Weight: number;
-    public Type: string;
-    public Special: string;
-    public Masterwork: boolean;
+    public name: string = null;
+    public description: string = null;
+    public weight: string = null;
+    public price: string = null;
+    public proficiency: string = null;
+    public weaponClass: string = null;
+    public damageType: string = null;
+    public source: string = null;
+    public special: string = null;
+    public dmgT: string = null;
+    public dmgS: string = null;
+    public dmgM: string = null;
+    public dmgL: string = null;
+    public critical: string = null;
 
     constructor(weaponModel) {
         if (weaponModel) {

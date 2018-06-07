@@ -1,11 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>rpgLoot Starter!</h1>
-<ul>
-  <li class="text" *ngFor="let item of data | async">
-    {{item.name}}
-  </li>
-</ul>
 
-<button (click)="buttonAddDataObject()">Add A DataObject</button>
-
-<app-weapons></app-weapons>
+<router-outlet></router-outlet>
